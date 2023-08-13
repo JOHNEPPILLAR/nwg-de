@@ -34,7 +34,7 @@ Health check end points:
 - No auth'ed health check end point: /v1/health 
 - Auth'ed Prometheus metrics end point: /v1/metrics
 
-API tests are located in the postman folder (https://github.com/JOHNEPPILLAR/nwg-de/postman)
+API tests are located in the postman folder (https://github.com/JOHNEPPILLAR/nwg-de/tree/master/postman)
 
 ## User Story 1 - Finding a car to rent
 
