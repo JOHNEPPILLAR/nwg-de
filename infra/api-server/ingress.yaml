@@ -1,0 +1,20 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: nwg-de-api-server
+  namespace: nwg-de
+  annotations:
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`nwg-de.api.johnpillar.me`)
+      kind: Rule
+      services:
+        - kind: Service
+          port: 8080
+          name: nwg-de-api-server
+          namespace: nwg-de
+  tls:
+    secretName: johnpillar-me-api

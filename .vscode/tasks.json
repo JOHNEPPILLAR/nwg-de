@@ -1,0 +1,9 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "getSecret",
+        "command": "${workspaceFolder}/scripts/update.sh",
+        "args": ["No", "No"],
+        "type": "shell"
+    }]
+}

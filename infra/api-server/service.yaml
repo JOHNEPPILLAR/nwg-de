@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nwg-de-api-server
+  namespace: nwg-de
+  labels:
+    name: nwg-de-api-server
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: nwg-de-api-server

@@ -1,0 +1,46 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: nwg-de-api-server
+  namespace: flux-system
+spec:
+  image: registry.johnpillar.me/nwg-de-api-server
+  interval: 5m0s
+  secretRef:
+    name: private-repo
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: nwg-de-api-server
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: nwg-de-api-server
+  policy:
+    semver:
+      range: 0.x.x
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: nwg-de-api-server
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: fluxcdbot@johnpillar.me
+        name: fluxcdbot
+      messageTemplate: "Flux: Updating image"
+    push:
+      branch: main
+  update:
+    strategy: Setters
