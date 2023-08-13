@@ -1,6 +1,6 @@
 # NWG DE Technical Assessment
 
-![go](https://badges.aleen42.com/src/golang.svg) ![Build](https://github.com/JOHNEPPILLAR/utility/actions/workflows/go.yml/badge.svg) [![GitHub tag](https://img.shields.io/github/tag/johneppillar/utility?include_prereleases=&sort=semver&color=blue)](https://github.com/johneppillar/utility/releases/)
+![go](https://badges.aleen42.com/src/golang.svg) ![Build](https://github.com/JOHNEPPILLAR/nwg-de/actions/workflows/go.yml/badge.svg) [![GitHub tag](https://img.shields.io/github/tag/johneppillar/nwg-de?include_prereleases=&sort=semver&color=blue)](https://github.com/johneppillar/nwg-de/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 # Scenario
